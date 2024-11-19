@@ -2,26 +2,34 @@
 // <weight>: Use a value from 100 to 900
 
 .montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
 }
 
 :root {
     --main-color: rgb(1, 36, 186);
     --accent-color: rgb(9, 216, 98);
     --text-color: rgb(53, 53, 53);
-  }
-  
+}
+
 * {
     border-radius: 8px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Monserrat", sans-serif;
     background-image: url(..//images/background.jpg);
     background-repeat: no-repeat;
-    background-size: auto; }
+    background-size: cover;
+    background-position: center;
 
-body {    font-family: "Monserrat", sans-serif;
+    
 }
+
+/* header*/
 .container {
     height: 80px;
     width: 1100px;
@@ -30,24 +38,135 @@ body {    font-family: "Monserrat", sans-serif;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     text-decoration: none;
     color: var(--main-color);
     font-size: 2.5rem;
     font-weight: 700;
 }
-.logo a {
+
+a {
     text-decoration: none;
 }
+
 .nav a {
-    text-decoration: none;
     color: var(--text-color);
     font-weight: bold;
     padding-right: 40px;
 }
+
 .nav ol {
     display: flex;
     align-items: center;
-   
     margin: 0;
+}
+
+/*container-content*/
+
+.content {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-content {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.first-column {
+    display: flex;
+    flex-direction: column;
+}
+.first-column p {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+h1 {
+    color: var(--main-color);
+    font-size: 4rem;
+    font-weight: 700;
+}
+.first-column {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    display: flex;
+}
+.first-column div {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    width: 150px;
+    margin-top: 30px;
+}
+.icons-item {
+    flex-direction: column;
+    margin: 0 20px;
+   
+}
+.icons-item::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+.icons-item:nth-child(1)::before {
+    content:"\f0c2";
+}
+.icons-item:nth-child(2)::before {
+    content:"\f3d1";
+}
+.icons-item:nth-child(3)::before {
+    content:"\f2f2";
+}
+.second-column {
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .13);    
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    padding: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    
+}
+label {
+    padding-top:15px;
+    padding-bottom: 8px;
+}
+input {
+    padding-top: 12px;
+    padding-bottom: 8px;
+    border: none;
+    border-radius: 0px;
+    border-bottom: solid 2px gray;
+}
+input::placeholder {
+    opacity: 4;
+}
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 20px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-right: 100px;
 }
